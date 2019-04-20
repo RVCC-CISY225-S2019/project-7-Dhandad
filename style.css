@@ -1,7 +1,209 @@
-body{
+body {
     font-family: 'ZCOOL XiaoWei', serif;
 }
 
 img {
     max-width: 100%;
 }
+
+@media screen and (min-width: 40rem) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 3.5em;
+        padding-top: 4em;
+        height: 5rem;
+        align-items: center;
+        background-color: #007bffb3;
+    }
+
+
+
+
+
+/*------------grids------*/
+    
+
+    /*  grids */
+
+    main {
+        display: grid;
+    }
+
+    /* hero content */
+
+    .content {
+        display: grid;
+        align-self: center;
+        justify-self: center;
+    }
+
+
+
+
+    /*  gallery */
+
+    .gallery {
+        display: grid;
+    }
+
+    /*  article */
+
+    article {
+        display: grid;
+
+    }
+
+    /* form container */
+    .form-container {
+        display: grid;
+    }
+
+    /* footer */
+
+    footer {
+        display: grid;
+        align-self: center;
+        justify-self: center;
+    }
+
+    /*  layout */
+
+    /*   mobile is the default layout*/
+
+    /* tablet layout >=48rem (768px) */
+
+    @media screen and (min-width: 48rem) {
+
+        /* hero content & about content */
+        .content {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+
+        .content picture,
+        .content p {
+            grid-column: 2/3;
+        }
+
+        .content p {
+            margin-left: 8rem;
+
+        }
+
+        .mobile-first {
+            display: none;
+        }
+
+
+
+        /*	gallery */
+
+        .gallery {
+            grid-template-columns: 1fr 20fr 1fr;
+        }
+
+        .gallery h3,
+        .gallery figure {
+            grid-column: 2/3;
+            align-self: center;
+            justify-self: center;
+
+        }
+
+
+
+        /*	article */
+
+        article {
+            grid-template-columns: 1fr 48ch 1fr;
+        }
+
+        .story {
+            grid-column: 2/3;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+        /*	form */
+
+
+        .form-container {
+            display: grid;
+            grid-template-columns: 1fr 48rem 1fr;
+
+
+        }
+
+        form {
+            margin: 0;
+        }
+
+
+        /* wide screen layout >=64rem (1024px) */
+
+        @media screen and (min-width: 64rem) {
+
+            /*      hero content */
+            .hero .content {
+                width: 80%;
+                font-size: 26px;
+            }
+
+            .hero .content p {
+                margin: 5px 0;
+            }
+
+            .hero .content picture {
+                margin-bottom: 50px;
+                display: block;
+            }
+
+
+            /*	about content */
+            
+
+            /*	gallery */
+            .gallery {
+                grid-template-columns: 1fr 1fr 1fr;
+
+
+            }
+
+            .gallery h3 {
+                grid-column: 3/4
+            }
+
+            .gallery figure {
+                grid-column: auto;
+            }
+
+            .gallery fifcaption {
+                margin-left: 2rem;
+            }
+
+
+            /*	article */
+            article {
+		font-size: 20px;
+		text-align: center;
+	}
+
+	
+	/*	form */
+	
+
+	
+
+            /*	form */
+
+        }
