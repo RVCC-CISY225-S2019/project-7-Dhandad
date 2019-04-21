@@ -21,9 +21,6 @@ img {
 
 
 
-/*------------grids------*/
-    
-
     /*  grids */
 
     main {
@@ -34,12 +31,13 @@ img {
 
     .content {
         display: grid;
-        align-self: center;
-        justify-self: center;
     }
 
+    /* about content */
 
-
+    .about-content {
+        display: grid;
+    }
 
     /*  gallery */
 
@@ -51,7 +49,11 @@ img {
 
     article {
         display: grid;
+    }
 
+    /* figure */
+    figure {
+        display: grid;
     }
 
     /* form container */
@@ -63,8 +65,7 @@ img {
 
     footer {
         display: grid;
-        align-self: center;
-        justify-self: center;
+        grid-column: center;
     }
 
     /*  layout */
@@ -75,32 +76,31 @@ img {
 
     @media screen and (min-width: 48rem) {
 
-        /* hero content & about content */
+        /*      hero content */
         .content {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: .5fr .5fr .5fr;
+            justify-items: center;
         }
-        
 
         .content picture,
-        .content p {
+        .content p,
+        .about-content {
             grid-column: 2/3;
+            justify-content: center;
         }
 
         .content p {
-            margin-left: 8rem;
-
+            margin-left: 1em;
         }
 
         .mobile-first {
             display: none;
         }
 
-
-
         /*	gallery */
 
         .gallery {
-            grid-template-columns: 1fr 20fr 1fr;
+            grid-template-columns: 1.1fr 1.1fr .8fr;
         }
 
         .gallery h3,
@@ -108,102 +108,108 @@ img {
             grid-column: 2/3;
             align-self: center;
             justify-self: center;
-
         }
 
-
+        /* figure inside gallery */
+        figure {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            justify-items: center;
+        }
 
         /*	article */
-
         article {
-            grid-template-columns: 1fr 48ch 1fr;
+
+            grid-template-columns: 48ch;
+            align-self: center;
+            justify-self: center;
+
         }
 
-        .story {
+        .story-body {
             grid-column: 2/3;
 
-
         }
 
-
-
-
-
-
-
+        .aritcle h2 {
+            align-self: center;
+            justify-self: center;
+        }
 
 
 
         /*	form */
-
-
         .form-container {
-            display: grid;
-            grid-template-columns: 1fr 48rem 1fr;
-
-
-        }
-
-        form {
-            margin: 0;
-        }
-
-
-        /* wide screen layout >=64rem (1024px) */
-
-        @media screen and (min-width: 64rem) {
-
-            /*      hero content */
-            .hero .content {
-                width: 80%;
-                font-size: 26px;
-            }
-
-            .hero .content p {
-                margin: 5px 0;
-            }
-
-            .hero .content picture {
-                margin-bottom: 50px;
-                display: block;
-            }
-
-
-            /*	about content */
-            
-
-            /*	gallery */
-            .gallery {
-                grid-template-columns: 1fr 1fr 1fr;
-
-
-            }
-
-            .gallery h3 {
-                grid-column: 3/4
-            }
-
-            .gallery figure {
-                grid-column: auto;
-            }
-
-            .gallery fifcaption {
-                margin-left: 2rem;
-            }
-
-
-            /*	article */
-            article {
-		font-size: 20px;
-		text-align: center;
-	}
-
-	
-	/*	form */
-	
-
-	
-
-            /*	form */
+            grid-template-columns: 1fr 38rem 1fr;
+            padding-top: 6rem;
 
         }
+
+
+    .form-container form {
+        grid-column: 1/2;
+        align-self: center;
+        justify-self: center;
+    }
+
+    
+    }
+    .form {
+        margin: 0;
+    }
+
+    .form-container h1{
+        grid-template-columns: 2/3;
+    
+            align-self: center;
+            justify-self: center;
+    }
+    
+    
+    .form-container form {
+        grid-column: 2/3;
+    }
+
+    .form-container h1 {
+        justify-self: center;
+    }
+
+}
+
+/* wide screen layout >=64rem (1024px) */
+
+@media screen and (min-width: 64rem) {
+
+    /*      hero content */
+
+    /*	about content */
+
+
+    /*	gallery */
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .gallery h2 {
+        grid-column: 1/4;
+    }
+
+    .gallery figure {
+        grid-column: auto;
+
+    }
+
+
+
+    .gallery figcaption {
+        margin-left: 2rem;
+    }
+
+
+
+    /*	article */
+
+    /*	form */
+
+}
