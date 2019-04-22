@@ -1,3 +1,4 @@
+
 *,
 *:before,
 *:after,
@@ -11,12 +12,11 @@ li:first-line {
 	box-shadow: none !important;
 	text-shadow: none !imporant;
 }
-
 /* Remove these for printing */
 header,
 footer,
 a[href="#"],
-.form_container {
+.form-container {
 	display: none;
 }
 
