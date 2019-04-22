@@ -12,7 +12,6 @@ li:first-line {
     text-shadow: none !imporant;
 }
 
-/* Remove these for printing */
 header,
 footer,
 a[href="#"],
